@@ -6,7 +6,7 @@ use raysoft\WxAuthServer\models\User;
 use yii\db\Migration;
 use yii\db\Schema;
 
-class m170307_015512_wxlogin_user extends Migration
+class m170307_015512_wxauth extends Migration
 {
     public function safeUp()
     {
