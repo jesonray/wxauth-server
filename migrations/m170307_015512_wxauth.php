@@ -29,7 +29,7 @@ class m170307_015512_wxlogin_user extends Migration
             'app_id' => Schema::TYPE_PK,
             'name' => Schema::TYPE_STRING . "(20) NOT NULL DEFAULT '' COMMENT '名称'",
             'url' => Schema::TYPE_STRING . "(100) NOT NULL DEFAULT '' COMMENT '网址'",
-            'access' => Schema::TYPE_TEXT . "NOT NULL DEFAULT '' COMMENT '权限'",
+            'access' => Schema::TYPE_TEXT . " NOT NULL DEFAULT '' COMMENT '权限'",
             'key' => Schema::TYPE_STRING . "(16) NOT NULL DEFAULT '' COMMENT 'Key'",
             'secret' => Schema::TYPE_STRING . "(32) NOT NULL DEFAULT '' COMMENT '密钥'",
             'created_at' => Schema::TYPE_INTEGER . " UNSIGNED NULL DEFAULT '0' COMMENT '创建时间'",
