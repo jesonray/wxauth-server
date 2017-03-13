@@ -16,7 +16,7 @@ use yii\helpers\Url;
         </p>
     </div>
 </div>
-<?php \raysoft\widgets\JsBlock::begin()?>
+<?php \mootensai\components\JsBlock::begin()?>
 <script>
 jQuery(function($){
     $('#btn-allow').on('click', function(){
@@ -40,4 +40,4 @@ jQuery(function($){
     }
 });
 </script>
-<?php \raysoft\widgets\JsBlock::end()?>
+<?php \mootensai\components\JsBlock::end()?>
