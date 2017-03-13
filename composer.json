@@ -13,7 +13,7 @@
     "yiisoft/yii2": ">=2.0.6",
     "raysoft/yii2-weui-asset": ">=1.0.0",
     "maxwen/yii2-easy-wechat": "^1.0",
-    "mootensai/yii2-jsblock": "dev-master"
+    "mootensai/yii2-jsblock": "*"
   },
   "autoload": {
     "psr-4": {"raysoft\\WxAuthServer\\": "src/"}
