@@ -1,0 +1,20 @@
+{
+  "name": "raysoft/wxauth-server",
+  "description": "通过认证的公众号实现网页扫描登陆(服务端)",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jesonray",
+      "email": "jesonray@163.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": ">=2.0.6",
+    "raysoft/yii2-weui-asset": ">=1.0.0",
+  },
+  "autoload": {
+    "psr-4": {"raysoft\\WxAuthServer\\": "src/"}
+  },
+  "minimum-stability": "dev"
+}
