@@ -9,15 +9,15 @@
 namespace raysoft\WxAuthServer\controllers;
 
 
-use raysoft\WxAuthServer\models\Task;
-use raysoft\WxAuthServer\models\User;
 use Yii;
+use yii\helpers\Url;
 use yii\base\Exception;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Url;
-use yii\web\Controller;
+use raysoft\WxAuthServer\models\Task;
+use raysoft\WxAuthServer\models\User;
+use raysoft\WxAuthServer\components\BaseController;
 
-class AuthController extends Controller
+class AuthController extends BaseController
 {
     public $layout = 'wechat';
 

@@ -1,3 +1,6 @@
+<?php
+$this->title = '登陆授权';
+?>
 <div class="icon-box" style="margin-top:14vh;text-align:center;line-height:2;">
 <?php if($status=='success'){?>
     <i class="weui-icon-success weui-icon_msg"></i>

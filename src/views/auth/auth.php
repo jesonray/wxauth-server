@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 
+$this->title = '登陆授权';
 \yii\web\JqueryAsset::register($this);
 ?>
 <div class="icon-box" style="margin-top:14vh;text-align:center;line-height:2;">
