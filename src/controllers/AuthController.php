@@ -11,13 +11,13 @@ namespace raysoft\WxAuthServer\controllers;
 
 use Yii;
 use yii\helpers\Url;
+use yii\web\Controller;
 use yii\base\Exception;
 use yii\helpers\ArrayHelper;
 use raysoft\WxAuthServer\models\Task;
 use raysoft\WxAuthServer\models\User;
-use raysoft\WxAuthServer\components\BaseController;
 
-class AuthController extends BaseController
+class AuthController extends Controller
 {
     public $layout = 'wechat';
 
@@ -159,12 +159,17 @@ class AuthController extends BaseController
      */
     public function actionConfirm($token, $action)
     {
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         // 查询任务
         /** @type Task $task */
         $task = Task::findOne(['token'=>$token]);
         if( !$task ){
             Yii::error('查询任务失败', 'WXLOGIN');
-            throw new Exception('查询任务失败');
+            return [
+                'code' => 0,
+                'message' => '查询任务失败'
+            ];
         }
 
         // 更新任务状态
@@ -175,11 +180,17 @@ class AuthController extends BaseController
         }
         $task->updated_at = time();
         if( !$task->save() ) {
-            Yii::error('查询任务失败', 'WXLOGIN');
-            throw new Exception('更新任务失败');
+            Yii::error('更新任务失败', 'WXLOGIN');
+            return [
+                'code' => 0,
+                'message' => '更新任务失败'
+            ];
         }
 
-        return 1;
+        return [
+            'code' => 200,
+            'data' => 1
+        ];
     }
 
     /**
